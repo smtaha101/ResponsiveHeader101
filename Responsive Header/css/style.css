@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 70px;
+    background-color: #000;
+}
+.logo
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+header ul
+{
+    display: flex;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 50px;
+}
+header ul li a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 4px 10px;
+    transition-duration: 0.3s;
+}
+header ul li a:hover
+{
+    background-color: rgba(82, 82, 82, 0.7);
+}
+@media (max-width: 976px)
+{
+    .menu
+    {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: #000 url("../Images/menu.png");
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .menu.active
+    {
+        background: #000 url("../Images/close.png");
+        background-size: 30px;   
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .logo
+    {
+        display: none;
+    }
+    header 
+    {
+        position: fixed;
+        top: -410px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 80px;
+        transition-duration: 0.5s;
+    }
+    header.active
+    {
+        top: 0;
+    }
+    header ul
+    {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    header ul li
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    header ul li a
+    {
+        font-size: 1.8em;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
